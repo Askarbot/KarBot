@@ -22,7 +22,7 @@ from GeezProject.config import API_HASH, API_ID, SESSION_NAME
 from GeezProject.services.queues import queues
 
 client = Client(SESSION_NAME, API_ID, API_HASH)
-pytgcalls = PyTgCalls(client)
+pytgcalls = PyTgCalls(client, port=7235)
 
 
 @pytgcalls.on_stream_end()
